@@ -1,0 +1,12 @@
+---
+applications:
+  - name: spring-gateway-demo
+    memory: 1G
+    instances: 1
+    routes:
+      - route: spring-gateway-demo.cfdev01-tx-a.iteclientsys.local
+    buildpacks:
+      - java_tda_v4_22
+    path: ./target/spring-gateway-demo-1.0.jar
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }}'    
